@@ -3,7 +3,7 @@
     #include <boost/spirit/home/x3/string/literal_string.hpp>
 #endif
 
-namespace smi::token
+namespace smi::grammar::token
 {
     namespace x3 = boost::spirit::x3;
 
@@ -25,7 +25,7 @@ namespace smi::token
     static const auto creation_requires = x3::lit("CREATION-REQUIRES");
     static const auto default_ = x3::lit("DEFAULT");
     static const auto defined = x3::lit("DEFINED");
-    static const auto defined_as = x3::lit("::=");
+    static const auto definition_symbol = x3::lit("::=");
     static const auto definitions = x3::lit("DEFINITIONS");
     static const auto defval = x3::lit("DEFVAL");
     static const auto description = x3::lit("DESCRIPTION");

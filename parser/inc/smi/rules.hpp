@@ -27,7 +27,7 @@ namespace smi::grammar
     static const auto imports = x3::rule<struct imports, ast::imports> {"imports"} = token::imports >> +imported_symbols >> ';';
 
     static const auto mib = x3::rule<struct doc, ast::mib> {"mib"} =
-        identifier >> token::definitions >> token::defined_as >> token::begin >> imports >> token::end;
+        identifier >> token::definitions >> token::definition_symbol >> token::begin >> imports >> token::end;
 
     static auto const& rules = x3::skip(x3::space)[mib];
 }
